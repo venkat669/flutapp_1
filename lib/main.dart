@@ -19,7 +19,7 @@ class Homepage extends StatelessWidget {
       ),
       body: Container(
         child: Center(
-          child: Text("Hello User",
+          child: Text("Hello User;",
            style: TextStyle(backgroundColor: Colors.grey , 
            fontStyle: FontStyle.italic, 
            fontFamily:'Roboto',
