@@ -9,26 +9,71 @@ void main() {
   ));
 }
 
-class Homepage extends StatelessWidget {
+class Homepage extends StatefulWidget {
+  const Homepage({ Key? key }) : super(key: key);
+
+  @override
+  _Statename createState() => _Statename();
+}
+
+class _Statename extends State<Homepage> {
+  int i = 0;
+  int j=0;
+  void _incrementCounter() {
+    setState(() {
+      i++;
+    });
+    
+  }
+    void _resetcount(){
+      _previousState();
+        setState(() {
+          i=0;
+        });
+        
+      }
+      void _previousState(){
+        setState(() {
+          j=i;
+        });
+      }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hello Guy"),
-         backgroundColor: Colors.blue,
+        title: const Text('Title'),
+        backgroundColor: Colors.blue,
       ),
-      body: Container(
-        child: Center(
-          child: Text("Hello User;",
-           style: TextStyle(backgroundColor: Colors.grey , 
-           fontStyle: FontStyle.italic, 
-           fontFamily:'Roboto',
-            color: Color.fromRGBO(254, 36, 7, 0.962),
-            fontSize: 30),),
-           
+
+      // body: Container(
+      //     padding: EdgeInsets.all(16.0),
+      //     margin: EdgeInsets.all(16.0),
+      //     alignment: Alignment.center,
+      //     decoration: BoxDecoration(
+      //       color: Colors.blueAccent,
+      //       borderRadius: BorderRadius.circular(10),
+          
+      // ),
+      
+      //)
+      body: Center(
+        child:  Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children:<Widget>[
+            Text("press button to increment counter"),
+            ElevatedButton(onPressed: _incrementCounter, 
+            child: Text("the button is pressed $i times")),
+            TextButton.icon(onPressed: _resetcount, icon: Icon(Icons.recycling),
+            label: Text("Reset button"),),//A textbutton to display text along with icon
+            OutlinedButton.icon(onPressed: _previousState,
+            icon: Icon(Icons.fork_left_rounded), label: Text("previous state $j"))
+          ],
         ),
-        
       ),
+
+      
     );
+    
+    
   }
 }
