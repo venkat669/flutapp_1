@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutapp_1/form.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -27,6 +30,7 @@ class MyHome extends StatefulWidget {
 class _MyhomeState extends State<MyHome> {
   String buttonText = "button init";
   int i=0;
+  String IconButtontxt = "";
   @override
   
   Widget build(BuildContext context) {
@@ -38,8 +42,11 @@ class _MyhomeState extends State<MyHome> {
         
       ),
       body: Center(
-        child: Container(
-          
+         child:  Column(
+          children:<Widget>[ 
+            Text("column first element"),
+
+         Container( // containers are similar to div in html
           clipBehavior:Clip.antiAliasWithSaveLayer,
           
           padding: EdgeInsets.all(10),
@@ -47,7 +54,7 @@ class _MyhomeState extends State<MyHome> {
           height: (MediaQuery.of(context).size).width * 1,
           width: (MediaQuery.of(context).size).width * 1,
           decoration: BoxDecoration(color:Color(0xff061db1),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(20),  // provides the rounded corner for the box
         boxShadow: [
       BoxShadow(
         color: Colors.grey.withOpacity(0.6),
@@ -80,33 +87,72 @@ class _MyhomeState extends State<MyHome> {
                     }
                   });
                 },
-                child: Text(buttonText), // Display updated text
+                child: Text(buttonText), hoverColor: Color.fromARGB(255, 208, 55, 137),elevation: 50,// Display updated text
                 ),
+                Text(buttonText),
                 Row(
-                  
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children:[  
                     
                 Column(
                   children:[
-                    
+                                                                              
                     Text("sd/fsg  "),
                 Text("dfgh"),
-                Text("hello ")]),
-
+                Text("hello ")
+                ]),
 
                 Column(children: [
                   
                   Text("sdfsg"),
-                Text("dfgh")])
+                Text("dfgh")
+                ])
 
                 ]),
+                 // int the above code the two columns are enclosed within a single row
+            /// column is used to arrange the number of elements in vertical order (top to bottom)
+            ///   row is used to arrange the number of elements in horizontal order  (left to right)
+            /// so in above example 2 seperate columns aranged in left to right ; each having element arranged top to bottom 
+            /// 
+                 IconButton(onPressed:(){
+                  setState((){
+                     if(i%2==0){
+                      IconButtontxt = "clicked";
+                      i++;
+                     }
+                     else{
+                      IconButtontxt = "again";
+                      i++;
+                     }
+                  });
+                 } , icon: Icon(Icons.account_balance_wallet_outlined),),
+                 Text(IconButtontxt+"sdf")
             ],
            
             
            ),
            
+            
+           
         ),
+        // column second element
+        Text("column second element"),
+        Container(   // containers are similar to div
+          padding: EdgeInsets.all(10),margin: EdgeInsetsDirectional.all(10) ,
+         // decoration: BoxDecoration(gradient: LinearGradient(colors:[ Colors.red, Colors.blue]),borderRadius: BorderRadius.))),  // liner gradient is used for coloring of container (red to blue )
+decoration: BoxDecoration(
+    gradient: LinearGradient(
+    colors:[ Colors.red, Colors.blue]
+    ),
+    borderRadius: BorderRadius.horizontal(  // horizontal is used instead of circular 
+      left: Radius.circular(10),
+      right: Radius.circular(52),
+    ),
+  ),
+          child: Text("the secound container wich is placed within the parent column"),
+        )
+        ])
+       
       )
     );
     
