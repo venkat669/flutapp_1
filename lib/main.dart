@@ -45,20 +45,14 @@ class _Statename extends State<Homepage> {
         backgroundColor: Colors.blue,
       ),
 
-      // body: Container(
-      //     padding: EdgeInsets.all(16.0),
-      //     margin: EdgeInsets.all(16.0),
-      //     alignment: Alignment.center,
-      //     decoration: BoxDecoration(
-      //       color: Colors.blueAccent,
-      //       borderRadius: BorderRadius.circular(10),
-          
-      // ),
+     
       
       //)
       body: Center(
         child:  Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          
           children:<Widget>[
             Text("press button to increment counter"),
             ElevatedButton(onPressed: _incrementCounter, 
@@ -66,11 +60,11 @@ class _Statename extends State<Homepage> {
             TextButton.icon(onPressed: _resetcount, icon: Icon(Icons.recycling),
             label: Text("Reset button"),),//A textbutton to display text along with icon
             OutlinedButton.icon(onPressed: _previousState,
-            icon: Icon(Icons.fork_left_rounded), label: Text("previous state $j"))
-          ],
+            icon: Icon(Icons.fork_left_rounded), label: Text("previous state $j")),
+        ],
         ),
       ),
-
+          
       
     );
     
