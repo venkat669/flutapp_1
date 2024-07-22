@@ -126,7 +126,7 @@ class _MyhomeState extends State<MyHome> {
                      }
                   });
                  } , icon: Icon(Icons.account_balance_wallet_outlined),),
-                 Text(IconButtontxt+"sdf")
+                 Text(IconButtontxt+"sdf",style: TextStyle(color: Color.fromARGB(255, 245, 239, 239)),)
             ],
            
             
@@ -150,7 +150,34 @@ decoration: BoxDecoration(
     ),
   ),
           child: Text("the secound container wich is placed within the parent column"),
-        )
+        ),
+         Column(
+           children: [
+             Container(
+              child: FloatingActionButton(
+                onPressed: (){
+                  setState(() {
+                    IconButtontxt="floatactbut";
+                  });
+             
+             }, foregroundColor: Colors.greenAccent,
+             backgroundColor: Colors.amberAccent,
+             shape: CircleBorder(),
+             child: Icon(Icons.edit,),),
+             ),
+
+             Container(
+              child: Text("The above button changes the text to ''floatactbut''  below wallet image ",
+              textAlign: TextAlign.center,
+              style:TextStyle(
+                fontStyle:FontStyle.italic,
+                fontWeight: FontWeight.w300,
+                fontSize: 50)
+                ),
+                )
+           ],
+         )
+        
         ])
        
       )
