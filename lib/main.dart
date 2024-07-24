@@ -55,12 +55,13 @@ class _Statename extends State<Homepage> {
               ),
               Image.network(
                 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                height: 400,
+                height: 100,
                 alignment: Alignment.center,
                 // image starts first at centre then gets repeated
                 repeat: ImageRepeat.repeat,
                 //  used to repeat image
               ),
+              Image.asset('assets/images/nature.png'),
               Text(
                 "Hello User",
                 style: TextStyle(fontSize: 30),
