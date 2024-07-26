@@ -61,7 +61,7 @@ class _Statename extends State<Homepage> {
                 repeat: ImageRepeat.repeat,
                 //  used to repeat image
               ),
-              Image.asset('assets/images/nature.png'),
+              Image.asset('assets/images/nature.png', height: 150),
               Text(
                 "Hello User",
                 style: TextStyle(fontSize: 30),
