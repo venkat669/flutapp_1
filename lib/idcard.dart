@@ -43,6 +43,29 @@ class Idcard extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
+
+                  /*     Easy way for above code
+                   Text(
+                    "Venkatraman Vaithee",
+                    style: GoogleFonts.majorMonoDisplay(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  */
+                  SizedBox(
+                      height:
+                          10), // creates space between the image and text of size 19),
+                  Text(
+                    "FLUTTER DEVELOPER",
+                    style: TextStyle(
+                      fontFamily: 'SourceCodeProItalic',
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold, // Use standard weight values
+                    ),
+                  ),
                 ],
               ),
             )

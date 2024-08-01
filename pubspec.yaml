@@ -23,3 +23,9 @@ flutter:
     - family: MajorMonoDisplay
       fonts:
         - asset: fonts/MajorMonoDisplay-Regular.ttf
+    - family: SourceCodePro
+      fonts:
+        - asset: fonts/SourceCodePro-VariableFont_wght.ttf
+    - family: SourceCodeProItalic
+      fonts:
+        - asset: fonts/SourceCodePro-Italic-VariableFont_wght.ttf
