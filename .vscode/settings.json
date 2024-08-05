@@ -1,8 +1,0 @@
-{
-    "editor.quickSuggestionsDelay": 10,
-    "editor.inlineSuggest.enabled": true,
-    "editor.inlineSuggest.suppressSuggestions": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.suggest.selectionMode": "always",
-    "terminal.integrated.suggest.quickSuggestions": true
-}
